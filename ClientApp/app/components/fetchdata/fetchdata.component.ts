@@ -19,6 +19,8 @@ export class FetchDataComponent implements OnInit {
             "Authorization": "Bearer " + this.oauthService.getAccessToken()
         });
 
+        debugger;
+
         this.http.get(this.baseUrl + 'api/SampleData/WeatherForecasts',
             { headers: headers })
             .subscribe(result => {
